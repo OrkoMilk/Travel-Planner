@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041A0E931BE4D629002F7F01 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A0E921BE4D629002F7F01 /* SplashScreenViewController.m */; settings = {ASSET_TAGS = (); }; };
+		041A0E961BE4DB57002F7F01 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A0E951BE4DB57002F7F01 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		041A0E991BE4DCC7002F7F01 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A0E981BE4DCC7002F7F01 /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		041A0E9C1BE4DEEF002F7F01 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A0E9B1BE4DEEF002F7F01 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		04216F561BE630B600E34ACD /* OMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04216F551BE630B600E34ACD /* OMTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		04216F591BE640BB00E34ACD /* CreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04216F581BE640BB00E34ACD /* CreateEventViewController.m */; settings = {ASSET_TAGS = (); }; };
 		04FF7A2C1BE4D33B00B9054A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF7A2B1BE4D33B00B9054A /* main.m */; };
 		04FF7A2F1BE4D33B00B9054A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF7A2E1BE4D33B00B9054A /* AppDelegate.m */; };
-		04FF7A321BE4D33B00B9054A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF7A311BE4D33B00B9054A /* ViewController.m */; };
 		04FF7A351BE4D33B00B9054A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FF7A331BE4D33B00B9054A /* Main.storyboard */; };
 		04FF7A371BE4D33B00B9054A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FF7A361BE4D33B00B9054A /* Assets.xcassets */; };
 		04FF7A3A1BE4D33B00B9054A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FF7A381BE4D33B00B9054A /* LaunchScreen.storyboard */; };
 		04FF7A451BE4D33B00B9054A /* Travel_PlannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF7A441BE4D33B00B9054A /* Travel_PlannerTests.m */; };
 		04FF7A501BE4D33B00B9054A /* Travel_PlannerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF7A4F1BE4D33B00B9054A /* Travel_PlannerUITests.m */; };
+		2A613097ED75F378D2AC0665 /* libPods-Travel Planner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B58BEF33E911F047E805CCD9 /* libPods-Travel Planner.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +41,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041A0E911BE4D629002F7F01 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
+		041A0E921BE4D629002F7F01 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
+		041A0E941BE4DB57002F7F01 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		041A0E951BE4DB57002F7F01 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		041A0E971BE4DCC7002F7F01 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		041A0E981BE4DCC7002F7F01 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		041A0E9A1BE4DEEF002F7F01 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		041A0E9B1BE4DEEF002F7F01 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		04216F541BE630B600E34ACD /* OMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMTableViewCell.h; sourceTree = "<group>"; };
+		04216F551BE630B600E34ACD /* OMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMTableViewCell.m; sourceTree = "<group>"; };
+		04216F571BE640BB00E34ACD /* CreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEventViewController.h; sourceTree = "<group>"; };
+		04216F581BE640BB00E34ACD /* CreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEventViewController.m; sourceTree = "<group>"; };
 		04FF7A271BE4D33B00B9054A /* Travel Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FF7A2B1BE4D33B00B9054A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04FF7A2D1BE4D33B00B9054A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04FF7A2E1BE4D33B00B9054A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04FF7A301BE4D33B00B9054A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04FF7A311BE4D33B00B9054A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		04FF7A341BE4D33B00B9054A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04FF7A361BE4D33B00B9054A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04FF7A391BE4D33B00B9054A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +67,9 @@
 		04FF7A4B1BE4D33B00B9054A /* Travel PlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travel PlannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FF7A4F1BE4D33B00B9054A /* Travel_PlannerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Travel_PlannerUITests.m; sourceTree = "<group>"; };
 		04FF7A511BE4D33B00B9054A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1695965F80327C189E427C4E /* Pods-Travel Planner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel Planner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel Planner/Pods-Travel Planner.debug.xcconfig"; sourceTree = "<group>"; };
+		19C9B762870B022D227EED85 /* Pods-Travel Planner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel Planner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel Planner/Pods-Travel Planner.release.xcconfig"; sourceTree = "<group>"; };
+		B58BEF33E911F047E805CCD9 /* libPods-Travel Planner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel Planner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A613097ED75F378D2AC0665 /* libPods-Travel Planner.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +98,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041A0E8D1BE4D4A2002F7F01 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				041A0E8E1BE4D526002F7F01 /* Controller */,
+				041A0E8F1BE4D53A002F7F01 /* Model */,
+				041A0E901BE4D53D002F7F01 /* View */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		041A0E8E1BE4D526002F7F01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				041A0E911BE4D629002F7F01 /* SplashScreenViewController.h */,
+				041A0E921BE4D629002F7F01 /* SplashScreenViewController.m */,
+				041A0E941BE4DB57002F7F01 /* SignUpViewController.h */,
+				041A0E951BE4DB57002F7F01 /* SignUpViewController.m */,
+				041A0E971BE4DCC7002F7F01 /* ResetPasswordViewController.h */,
+				041A0E981BE4DCC7002F7F01 /* ResetPasswordViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		041A0E8F1BE4D53A002F7F01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		041A0E901BE4D53D002F7F01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		04216F531BE62C5F00E34ACD /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				041A0E9A1BE4DEEF002F7F01 /* HomeViewController.h */,
+				041A0E9B1BE4DEEF002F7F01 /* HomeViewController.m */,
+				04216F541BE630B600E34ACD /* OMTableViewCell.h */,
+				04216F551BE630B600E34ACD /* OMTableViewCell.m */,
+				04216F571BE640BB00E34ACD /* CreateEventViewController.h */,
+				04216F581BE640BB00E34ACD /* CreateEventViewController.m */,
+			);
+			name = Event;
+			sourceTree = "<group>";
+		};
 		04FF7A1E1BE4D33B00B9054A = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +155,8 @@
 				04FF7A431BE4D33B00B9054A /* Travel PlannerTests */,
 				04FF7A4E1BE4D33B00B9054A /* Travel PlannerUITests */,
 				04FF7A281BE4D33B00B9054A /* Products */,
+				D76A1FA212DD05155998FBB9 /* Pods */,
+				9A4BB50648016C481DAC6308 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +173,10 @@
 		04FF7A291BE4D33B00B9054A /* Travel Planner */ = {
 			isa = PBXGroup;
 			children = (
+				04216F531BE62C5F00E34ACD /* Event */,
+				041A0E8D1BE4D4A2002F7F01 /* Register */,
 				04FF7A2D1BE4D33B00B9054A /* AppDelegate.h */,
 				04FF7A2E1BE4D33B00B9054A /* AppDelegate.m */,
-				04FF7A301BE4D33B00B9054A /* ViewController.h */,
-				04FF7A311BE4D33B00B9054A /* ViewController.m */,
 				04FF7A331BE4D33B00B9054A /* Main.storyboard */,
 				04FF7A361BE4D33B00B9054A /* Assets.xcassets */,
 				04FF7A381BE4D33B00B9054A /* LaunchScreen.storyboard */,
@@ -140,6 +212,23 @@
 			path = "Travel PlannerUITests";
 			sourceTree = "<group>";
 		};
+		9A4BB50648016C481DAC6308 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B58BEF33E911F047E805CCD9 /* libPods-Travel Planner.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D76A1FA212DD05155998FBB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1695965F80327C189E427C4E /* Pods-Travel Planner.debug.xcconfig */,
+				19C9B762870B022D227EED85 /* Pods-Travel Planner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04FF7A541BE4D33B00B9054A /* Build configuration list for PBXNativeTarget "Travel Planner" */;
 			buildPhases = (
+				7960CDBAF5777AF30046A9BA /* Check Pods Manifest.lock */,
 				04FF7A231BE4D33B00B9054A /* Sources */,
 				04FF7A241BE4D33B00B9054A /* Frameworks */,
 				04FF7A251BE4D33B00B9054A /* Resources */,
+				C2B6C7A602C592C68712A053 /* Embed Pods Frameworks */,
+				3E4967802E0920118C3600E5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,14 +360,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E4967802E0920118C3600E5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Travel Planner/Pods-Travel Planner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7960CDBAF5777AF30046A9BA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2B6C7A602C592C68712A053 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Travel Planner/Pods-Travel Planner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04FF7A231BE4D33B00B9054A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04FF7A321BE4D33B00B9054A /* ViewController.m in Sources */,
 				04FF7A2F1BE4D33B00B9054A /* AppDelegate.m in Sources */,
+				041A0E991BE4DCC7002F7F01 /* ResetPasswordViewController.m in Sources */,
 				04FF7A2C1BE4D33B00B9054A /* main.m in Sources */,
+				04216F591BE640BB00E34ACD /* CreateEventViewController.m in Sources */,
+				041A0E961BE4DB57002F7F01 /* SignUpViewController.m in Sources */,
+				04216F561BE630B600E34ACD /* OMTableViewCell.m in Sources */,
+				041A0E931BE4D629002F7F01 /* SplashScreenViewController.m in Sources */,
+				041A0E9C1BE4DEEF002F7F01 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,9 +557,12 @@
 		};
 		04FF7A551BE4D33B00B9054A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1695965F80327C189E427C4E /* Pods-Travel Planner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Travel Planner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "milk.orko.Travel-Planner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,9 +571,12 @@
 		};
 		04FF7A561BE4D33B00B9054A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19C9B762870B022D227EED85 /* Pods-Travel Planner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Travel Planner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "milk.orko.Travel-Planner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -499,6 +650,7 @@
 				04FF7A561BE4D33B00B9054A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04FF7A571BE4D33B00B9054A /* Build configuration list for PBXNativeTarget "Travel PlannerTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +659,7 @@
 				04FF7A591BE4D33B00B9054A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04FF7A5A1BE4D33B00B9054A /* Build configuration list for PBXNativeTarget "Travel PlannerUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +668,7 @@
 				04FF7A5C1BE4D33B00B9054A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
