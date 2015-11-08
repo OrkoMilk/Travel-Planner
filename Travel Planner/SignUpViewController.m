@@ -32,35 +32,27 @@
     NSString *username = self.usernameTextField.text;
     NSString *password = self.passwordTextField.text;
     NSString *finalEmail = [email stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceCharacterSet];
-       
-//    var finalEmail = email.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
     
     if ([username length] < 3) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
-                                                        message:@"Username must be greater than 3 characters"
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles: nil];
-        [alert show];
+        UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Invalid" message:@"Username must be greater than 3 characters" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+        [all addAction:ok];
+        [self presentViewController:all animated:YES completion:nil];
     }
     else if ([email length] < 6){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
-                                                        message:@"Please enter a valid email address"
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles: nil];
-        [alert show];
-    }
+        UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Invalid" message:@"Please enter a valid email address" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+        [all addAction:ok];
+        [self presentViewController:all animated:YES completion:nil];
+        }
     else if ([password length] < 6){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
-                                                        message:@"Password must be greater than 6 characters"
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles: nil];
-        [alert show];
-    }
+        UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Invalid" message:@"Password must be greater than 6 characters" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+        [all addAction:ok];
+        [self presentViewController:all animated:YES completion:nil];
+        }
     else {
-        // run activityIndicatorView
+
         [self.activityIndicatorView startAnimating];
         PFUser *newUser = [PFUser user];
         newUser.username = username;
@@ -70,23 +62,16 @@
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             [self.activityIndicatorView stopAnimating];
             if (error) {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                message:nil
-                                                               delegate:self
-                                                      cancelButtonTitle:@"OK"
-                                                      otherButtonTitles: nil];
-                [alert show];
-            } else {
-                
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
-                                                                message:nil
-                                                               delegate:self
-                                                      cancelButtonTitle:@"OK"
-                                                      otherButtonTitles: nil];
-                [alert show];
-                
-//                [PFUser enableRevocableSessionInBackground];
-                
+                UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Error" message:nil preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                [all addAction:ok];
+                [self presentViewController:all animated:YES completion:nil];
+                } else {
+                UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Success" message:nil preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                [all addAction:ok];
+                [self presentViewController:all animated:YES completion:nil];
+                    
                 HomeViewController *newController = [self.storyboard instantiateViewControllerWithIdentifier:@"idHome"];
                 [self presentViewController:newController animated:YES completion:nil];
                 

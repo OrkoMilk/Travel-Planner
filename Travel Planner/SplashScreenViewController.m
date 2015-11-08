@@ -32,24 +32,23 @@
     
     if ([username length] < 3) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
-                                                              message:@"Username must be greater than 3 characters"
-                                                             delegate:self
-                                                    cancelButtonTitle:@"OK"
-                                                    otherButtonTitles: nil];
-        [alert show];
+        UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Invalid" message:@"Username must be greater than 3 characters" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+        [all addAction:ok];
+        [self presentViewController:all animated:YES completion:nil];
+        
         
     }
     else if ([password length] < 6){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
-                                                        message:@"Password must be greater than 6 characters"
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles: nil];
-        [alert show];
+        
+        UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Invalid" message:@"Password must be greater than 6 characters" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+        [all addAction:ok];
+        [self presentViewController:all animated:YES completion:nil];
+   
     }
     else{
-//        [self.activityIndicatorView startAnimating];
+        [self.activityIndicatorView startAnimating];
         
         //login
         [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
@@ -62,12 +61,11 @@
                                                 
 
                                             } else {
-                                                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                                                message:nil
-                                                                                               delegate:self
-                                                                                      cancelButtonTitle:@"OK"
-                                                                                      otherButtonTitles: nil];
-                                                [alert show];
+                                                UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Error" message:nil preferredStyle:UIAlertControllerStyleAlert];
+                                                UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                                                [all addAction:ok];
+                                                [self presentViewController:all animated:YES completion:nil];
+                                                
                                             }
                                         }];
         

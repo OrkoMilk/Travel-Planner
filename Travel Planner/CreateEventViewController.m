@@ -80,14 +80,10 @@
         
         NSString *formatt = [dateFormatter stringFromDate:self.currentDate];
         self.fromLabel.text = formatt;
-    
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
-                                                        message:@"incorrect start date"
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles: nil];
-        [alert show];
-
+        UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Invalid" message:@"incorrect start date" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+        [all addAction:ok];
+        [self presentViewController:all animated:YES completion:nil];
         
     }
 
