@@ -32,7 +32,7 @@
     NSString *username = self.usernameTextField.text;
     NSString *password = self.passwordTextField.text;
     NSString *finalEmail = [email stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceCharacterSet];
-    
+       
 //    var finalEmail = email.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
     
     if ([username length] < 3) {
@@ -77,20 +77,18 @@
                                                       otherButtonTitles: nil];
                 [alert show];
             } else {
+                
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
                                                                 message:nil
                                                                delegate:self
                                                       cancelButtonTitle:@"OK"
                                                       otherButtonTitles: nil];
                 [alert show];
-               
-                dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                    
-                    HomeViewController *newController = [self.storyboard instantiateViewControllerWithIdentifier:@"idHome"];
-                    
-                    [self.navigationController pushViewController:newController animated:YES];
-                                        
-                });
+                
+//                [PFUser enableRevocableSessionInBackground];
+                
+                HomeViewController *newController = [self.storyboard instantiateViewControllerWithIdentifier:@"idHome"];
+                [self presentViewController:newController animated:YES completion:nil];
                 
             }
         }];

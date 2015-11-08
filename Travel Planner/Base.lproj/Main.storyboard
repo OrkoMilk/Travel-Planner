@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LB9-V1-B8Y">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
@@ -48,7 +47,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jIX-6g-0SV">
-                                <rect key="frame" x="0.0" y="206" width="375" height="102"/>
+                                <rect key="frame" x="0.0" y="211" width="375" height="102"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="8vx-Y0-f9q"/>
@@ -57,11 +56,11 @@
                                     <!--2015-11-01 12:40:42 +0000-->
                                 </date>
                                 <connections>
-                                    <action selector="didChangeDate:" destination="H0G-Tb-FFZ" eventType="valueChanged" id="hV7-tk-fX6"/>
+                                    <action selector="didChangeDate:" destination="H0G-Tb-FFZ" eventType="valueChanged" id="Kec-IV-wQT"/>
                                 </connections>
                             </datePicker>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J6Q-cK-eXW">
-                                <rect key="frame" x="20" y="352" width="335" height="142"/>
+                                <rect key="frame" x="20" y="358" width="335" height="142"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -71,7 +70,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjw-Ti-8MD">
-                                <rect key="frame" x="20" y="323" width="86" height="21"/>
+                                <rect key="frame" x="20" y="329" width="86" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="29E-Qx-6rx"/>
@@ -81,8 +80,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trl-Fy-q0F">
-                                <rect key="frame" x="20" y="177" width="166" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date from" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trl-Fy-q0F">
+                                <rect key="frame" x="20" y="181" width="166" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="0x4-b6-snB"/>
@@ -103,8 +102,8 @@
                                     <segment title="To"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIH-Fz-uFN">
-                                <rect key="frame" x="188" y="177" width="167" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIH-Fz-uFN">
+                                <rect key="frame" x="188" y="181" width="167" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="3w5-vU-FaA"/>
@@ -121,27 +120,39 @@
                             <constraint firstAttribute="trailing" secondItem="bIH-Fz-uFN" secondAttribute="trailing" constant="20" id="0nI-7i-cJ6"/>
                             <constraint firstAttribute="trailing" secondItem="J6Q-cK-eXW" secondAttribute="trailing" constant="20" id="1lJ-Xo-6xo"/>
                             <constraint firstItem="trl-Fy-q0F" firstAttribute="leading" secondItem="dxN-wp-erH" secondAttribute="leading" constant="20" id="5aG-Uq-how"/>
+                            <constraint firstItem="bIH-Fz-uFN" firstAttribute="leading" secondItem="trl-Fy-q0F" secondAttribute="trailing" constant="2" id="5qc-BY-RgG"/>
                             <constraint firstItem="cFS-FQ-0az" firstAttribute="top" secondItem="PwD-bM-01F" secondAttribute="bottom" constant="-1" id="68J-Xc-v6T"/>
                             <constraint firstItem="cFS-FQ-0az" firstAttribute="leading" secondItem="dxN-wp-erH" secondAttribute="leading" constant="20" id="7ma-rr-9UM"/>
-                            <constraint firstItem="trl-Fy-q0F" firstAttribute="top" secondItem="clx-rM-ppy" secondAttribute="bottom" constant="8" id="7we-dE-nuQ"/>
-                            <constraint firstItem="jIX-6g-0SV" firstAttribute="top" secondItem="bIH-Fz-uFN" secondAttribute="bottom" constant="8" id="8KL-dL-2Av"/>
+                            <constraint firstItem="trl-Fy-q0F" firstAttribute="top" secondItem="clx-rM-ppy" secondAttribute="bottom" constant="12" id="7we-dE-nuQ"/>
+                            <constraint firstItem="jIX-6g-0SV" firstAttribute="top" secondItem="bIH-Fz-uFN" secondAttribute="bottom" constant="60" id="8KL-dL-2Av"/>
                             <constraint firstItem="0fS-hg-IYr" firstAttribute="leading" secondItem="dxN-wp-erH" secondAttribute="leading" constant="20" id="9Vk-wK-yLN"/>
                             <constraint firstAttribute="trailing" secondItem="PwD-bM-01F" secondAttribute="trailing" constant="26" id="FEP-Ur-l8Z"/>
                             <constraint firstItem="clx-rM-ppy" firstAttribute="top" secondItem="0fS-hg-IYr" secondAttribute="bottom" constant="7" id="Fen-fs-xOg"/>
+                            <constraint firstItem="trl-Fy-q0F" firstAttribute="leading" secondItem="dxN-wp-erH" secondAttribute="leading" constant="20" id="Ijn-wz-7W1"/>
                             <constraint firstItem="J6Q-cK-eXW" firstAttribute="top" secondItem="xjw-Ti-8MD" secondAttribute="bottom" constant="8" id="Pa3-Yc-Bsf"/>
                             <constraint firstItem="PwD-bM-01F" firstAttribute="top" secondItem="FyZ-Pd-zTG" secondAttribute="bottom" constant="8" id="Put-N1-2pz"/>
                             <constraint firstAttribute="trailing" secondItem="jIX-6g-0SV" secondAttribute="trailing" id="QTI-PT-7EV"/>
-                            <constraint firstItem="bIH-Fz-uFN" firstAttribute="top" secondItem="clx-rM-ppy" secondAttribute="bottom" constant="8" id="Ugy-II-6zm"/>
+                            <constraint firstItem="jIX-6g-0SV" firstAttribute="top" secondItem="bIH-Fz-uFN" secondAttribute="bottom" constant="9" id="St3-bD-7zs"/>
+                            <constraint firstItem="bIH-Fz-uFN" firstAttribute="top" secondItem="clx-rM-ppy" secondAttribute="bottom" constant="12" id="Ugy-II-6zm"/>
                             <constraint firstItem="J6Q-cK-eXW" firstAttribute="leading" secondItem="dxN-wp-erH" secondAttribute="leading" constant="20" id="V0q-lW-u3x"/>
                             <constraint firstItem="clx-rM-ppy" firstAttribute="leading" secondItem="dxN-wp-erH" secondAttribute="leading" constant="20" id="eJi-99-Rz2"/>
                             <constraint firstAttribute="trailing" secondItem="cFS-FQ-0az" secondAttribute="trailing" constant="20" id="k6D-eB-svc"/>
                             <constraint firstItem="jIX-6g-0SV" firstAttribute="leading" secondItem="dxN-wp-erH" secondAttribute="leading" id="laO-Gy-UQq"/>
                             <constraint firstItem="0fS-hg-IYr" firstAttribute="top" secondItem="cFS-FQ-0az" secondAttribute="bottom" constant="17" id="qtt-Wd-WaY"/>
                             <constraint firstAttribute="trailing" secondItem="clx-rM-ppy" secondAttribute="trailing" constant="20" id="sdS-bw-yXl"/>
-                            <constraint firstItem="xjw-Ti-8MD" firstAttribute="top" secondItem="jIX-6g-0SV" secondAttribute="bottom" constant="15" id="twb-6l-TJZ"/>
+                            <constraint firstItem="xjw-Ti-8MD" firstAttribute="top" secondItem="jIX-6g-0SV" secondAttribute="bottom" constant="16" id="twb-6l-TJZ"/>
                             <constraint firstAttribute="trailing" secondItem="0fS-hg-IYr" secondAttribute="trailing" constant="20" id="yBq-DF-abU"/>
+                            <constraint firstAttribute="trailing" secondItem="bIH-Fz-uFN" secondAttribute="trailing" constant="20" id="yQH-cf-409"/>
                             <constraint firstItem="xjw-Ti-8MD" firstAttribute="leading" secondItem="dxN-wp-erH" secondAttribute="leading" constant="20" id="ztp-Tm-Kon"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5aG-Uq-how"/>
+                                <exclude reference="8KL-dL-2Av"/>
+                                <exclude reference="0nI-7i-cJ6"/>
+                                <exclude reference="5qc-BY-RgG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="QJR-HG-Udh"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -209,10 +220,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqK-mb-Mt9">
-                                                    <rect key="frame" x="8" y="8" width="212" height="46"/>
+                                                    <rect key="frame" x="13" y="8" width="212" height="27"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-JR-2Oe">
+                                                    <rect key="frame" x="13" y="33" width="263" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -220,6 +238,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
+                                            <outlet property="dateToLabel" destination="ceG-JR-2Oe" id="0Sy-Zq-ZKU"/>
                                             <outlet property="nameEventLabel" destination="rqK-mb-Mt9" id="QQz-cg-HMb"/>
                                         </connections>
                                     </tableViewCell>
@@ -251,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sar-EU-tYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="564.5" y="388.5"/>
+            <point key="canvasLocation" x="569.5" y="388.5"/>
         </scene>
         <!--Splash Screen View Controller-->
         <scene sceneID="Eq6-dG-XoF">

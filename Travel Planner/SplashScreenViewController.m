@@ -52,7 +52,7 @@
 //        [self.activityIndicatorView startAnimating];
         
         //login
-        [PFUser logInWithUsernameInBackground:username password:password                                        block:^(PFUser *user, NSError *error) {
+        [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
                                             [self.activityIndicatorView stopAnimating];
                                             
                                             if (user) {
@@ -74,7 +74,7 @@
         
     }
     
-//    [self.activityIndicatorView stopAnimating]; // ????
+
 }
 
 

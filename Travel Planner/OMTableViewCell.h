@@ -11,5 +11,6 @@
 @interface OMTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nameEventLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateToLabel;
 
 @end

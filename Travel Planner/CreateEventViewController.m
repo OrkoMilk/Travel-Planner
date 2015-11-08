@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic)NSDate *fromDate;
 @property (strong, nonatomic)NSDate *toDate;
+@property (strong, nonatomic)NSDate *currentDate;
+@property (assign, nonatomic) int days;
 
 @end
 
@@ -40,50 +42,57 @@
     
     self.fromDate = self.datePiker.date;
     self.toDate = self.datePiker.date;
+    
+    
+    //date currentDate
+    self.currentDate = [NSDate date];
+    //min date
+    self.datePiker.minimumDate = self.currentDate;
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void) viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    //d
-}
-
 
 - (IBAction)didChangeDate:(UIDatePicker *)sender {
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"EEE, MMM d, ''yy"];
     [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
-    NSDate *now = [NSDate date];
-    NSLog(@"%@",now);
+    
+    
     NSString *formattedDate = [dateFormatter stringFromDate:self.datePiker.date];
     
     
-    if (self.datePiker.date < now) {
-        NSLog(@"date incorect %@",self.datePiker.date);
-        NSLog(@"now %@",now);
-        
-    }else{
-               switch (self.fromToSegment.selectedSegmentIndex) {
-                   case 0:
-                       self.fromLabel.text = formattedDate;
-                       self.fromDate = self.datePiker.date;
-                       break;
-                   case 1:
-                       self.toLabel.text = formattedDate;
-                       self.toDate = self.datePiker.date;
-                       break;
-                   default:
-                       break;
-               }
-        [self coutDay];
-    }
+        switch (self.fromToSegment.selectedSegmentIndex) {
+            case 0:
+                self.fromLabel.text = formattedDate;
+                self.fromDate = self.datePiker.date;
+                [self coutDay];
+                break;
+            case 1:
+                self.toLabel.text = formattedDate;
+                self.toDate = self.datePiker.date;
+                [self coutDay];
+                break;
+            default:
+                break;
+        }
     
+    if (self.days < 0) {
+        
+        NSString *formatt = [dateFormatter stringFromDate:self.currentDate];
+        self.fromLabel.text = formatt;
+    
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid"
+                                                        message:@"incorrect start date"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+
+        
+    }
+
 }
+
 
 - (void) coutDay {
     
@@ -93,24 +102,28 @@
 
     NSDateComponents *components = [calendar components:unitFlag fromDate:self.fromDate toDate:self.toDate options:0];
     
-    int days = [components day];
+    self.days = [components day];
     
-    NSLog(@"%i",days);
+    NSLog(@"%i",self.days);
 }
 
 - (IBAction)saveEventAction:(id)sender {
     
+    PFUser *user = [PFUser currentUser];
+    
     NSString *eventName = self.eventNameTextField.text;
     NSString *destination = self.destinationTextField.text;
     NSString *comments = self.commentsTextView.text;
+    NSString *userID = [user objectId];
+    NSDate *date = self.toDate;
     
-//    NSString *fromData =
-//    NSString *toData =
     
     PFObject *event = [PFObject objectWithClassName:@"Event"];
     event[@"eventName"] = eventName;
     event[@"destination"] = destination;
     event[@"comments"] = comments;
+    event[@"usetID"] = userID;
+    event[@"date"] = date;
     
     if (![self.replace isEqualToString:@"1"]) {
     
@@ -134,9 +147,13 @@
             event[@"eventName"] = eventName;
             event[@"destination"] = destination;
             event[@"comments"] = comments;
+
             [event saveInBackground];
             
             HomeViewController *newController = [self.storyboard instantiateViewControllerWithIdentifier:@"idHome"];
+            
+            newController.userID = userID;
+            
             [self presentViewController:newController animated:YES completion:nil];
             
         }];

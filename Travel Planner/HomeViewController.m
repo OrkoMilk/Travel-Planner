@@ -23,15 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    self.eventsArray = [[NSMutableArray alloc] init];
-    
     [self fromParse];
     [self.tableView reloadData];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -52,23 +45,32 @@
 // load data
 - (void) fromParse {
     
-    PFQuery *fromParseEvent = [PFQuery queryWithClassName:@"Event"];
-    [fromParseEvent findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        NSLog(@"%@",objects);
-        
-        if (!error) {
-            self.eventsArray = [[NSMutableArray alloc] initWithArray:objects];
-        }else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello :)"
-                                                            message:@"Зlease add an event, by clicking on the plus in the upper left corner"
-                                                           delegate:self
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles: nil];
-            [alert show];
-        }
-        
-        [self.tableView reloadData];
-    }];
+    self.eventsArray = [[NSMutableArray alloc] init];
+
+        PFQuery *fromParseEvent = [PFQuery queryWithClassName:@"Event"];
+        [fromParseEvent findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+            NSLog(@"%@",objects);
+            
+            PFUser *user = [PFUser currentUser];
+            NSString *userID = [user objectId];
+            
+            if (!error) {
+                
+                for (int i = 0; i < [objects count]; i++) {
+                    
+                    PFObject *tempObject = [objects objectAtIndex:i];
+                     NSString *temp = [tempObject objectForKey:@"usetID"];
+                    
+                    if ([userID isEqualToString:temp]) {
+                        [self.eventsArray addObject:[objects objectAtIndex:i]];
+                    }
+                }
+                
+            }
+            
+            [self.tableView reloadData];
+        }];    
+    
 }
 
 //UIViewController
@@ -110,6 +112,15 @@
     PFObject *tempObject = [self.eventsArray objectAtIndex:indexPath.row];
     cell.nameEventLabel.text = [tempObject objectForKey:@"eventName"];
     
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    int unitFlag = NSCalendarUnitDay;
+    NSDateComponents *components = [calendar components:unitFlag fromDate:now toDate:[tempObject objectForKey:@"date"] options:0];
+    int days = [components day];
+    NSLog(@"%i",days);
+    
+    cell.dateToLabel.text = [NSString stringWithFormat:@"the event left:%d days",days];
+    
     return cell;
 
 }
@@ -117,7 +128,6 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     PFObject *tempObject = [self.eventsArray objectAtIndex:indexPath.row];
-//    [tempObject removeObjectForKey:@"objectId"];
     [tempObject deleteInBackground];
     NSLog(@"%@",tempObject);
     [self.eventsArray removeObjectAtIndex:indexPath.row];

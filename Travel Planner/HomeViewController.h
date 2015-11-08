@@ -12,6 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+//push
+@property (strong, nonatomic) NSString * userID;
+
+//actions
 - (IBAction)logOutAction:(id)sender;
 - (IBAction)addNewEvent:(id)sender;
 
