@@ -10,4 +10,8 @@
 
 @interface TimeTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *destinationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
 @end

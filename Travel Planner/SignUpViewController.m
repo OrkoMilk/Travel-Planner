@@ -62,15 +62,16 @@
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             [self.activityIndicatorView stopAnimating];
             if (error) {
-                UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Error" message:nil preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Error" message:@"Please enter valid email" preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
                 [all addAction:ok];
                 [self presentViewController:all animated:YES completion:nil];
+                
                 } else {
                 UIAlertController *all = [UIAlertController alertControllerWithTitle:@"Success" message:nil preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
                 [all addAction:ok];
-                [self presentViewController:all animated:YES completion:nil];
+                
                     
                 HomeViewController *newController = [self.storyboard instantiateViewControllerWithIdentifier:@"idHome"];
                 [self presentViewController:newController animated:YES completion:nil];

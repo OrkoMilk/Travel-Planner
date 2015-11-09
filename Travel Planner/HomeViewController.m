@@ -52,8 +52,7 @@
 
         PFQuery *fromParseEvent = [PFQuery queryWithClassName:@"Event"];
         [fromParseEvent findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-            NSLog(@"%@",objects);
-            
+          
             PFUser *user = [PFUser currentUser];
             NSString *userID = [user objectId];
             
@@ -120,14 +119,12 @@
     int unitFlag = NSCalendarUnitDay;
     NSDateComponents *components = [calendar components:unitFlag fromDate:now toDate:[tempObject objectForKey:@"date"] options:0];
     int days = [components day];
-    NSLog(@"%i",days);
     
     if (days > 30) {
         [self.nextMonth addObject:tempObject];
     }
     
     cell.dateToLabel.text = [NSString stringWithFormat:@"the event left:%d days",days];
-    
     return cell;
 
 }
@@ -164,13 +161,15 @@
 
 - (IBAction)timeTableAction:(id)sender {
     
-//    TimetableViewController *newController = [self.storyboard instantiateViewControllerWithIdentifier:@"IDTimetable"];
-//    newController.timeTableArray = self.nextMonth;
-//    [self presentViewController:newController animated:YES completion:nil];
+//    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     
-    
-//    TimetableViewController *newController = [self.storyboard instantiateViewControllerWithIdentifier:@"IDTimetable"];
-//    [self presentViewController:newController animated:YES completion:nil];
+        TimetableViewController *newController = [self.storyboard instantiateViewControllerWithIdentifier:@"IDTimetable"];
+        
+        newController.timeTableArray = self.nextMonth;
+        
+        [self presentViewController:newController animated:YES completion:nil];
+
+//    });
 
 }
 

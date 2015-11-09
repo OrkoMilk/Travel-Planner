@@ -8,6 +8,7 @@
 
 #import "TimetableViewController.h"
 #import "HomeViewController.h"
+#import "TimeTableViewCell.h"
 #import <Parse/Parse.h>
 
 @interface TimetableViewController ()  <UITableViewDataSource, UITableViewDelegate>
@@ -16,16 +17,44 @@
 
 @implementation TimetableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.timeTableArray count];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString* identifier = @"cell1";
+    
+    TimeTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if (!cell) {
+        cell = [[TimeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    
+    PFObject *tempObject = [self.timeTableArray objectAtIndex:indexPath.row];
+    cell.eventNameLabel.text = [NSString stringWithFormat:@"Even name: %@",[tempObject objectForKey:@"eventName"]];
+    cell.destinationLabel.text = [NSString stringWithFormat:@"Destination: %@",[tempObject objectForKey:@"destination"]];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEE, MMM d, ''yy"];
+    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+    
+    NSString *string = [dateFormatter stringFromDate:[tempObject objectForKey:@"date"]];
+    cell.dateLabel.text = string;
+    
+    return cell;
+    
 }
 
+- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    return @"Next Event:";
+}
 
+- (IBAction)backAction:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

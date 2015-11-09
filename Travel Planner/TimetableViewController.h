@@ -10,6 +10,9 @@
 
 @interface TimetableViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *timeTableArray;
+
+- (IBAction)backAction:(id)sender;
 
 @end

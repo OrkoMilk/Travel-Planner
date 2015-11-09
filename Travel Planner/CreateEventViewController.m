@@ -99,8 +99,6 @@
     NSDateComponents *components = [calendar components:unitFlag fromDate:self.fromDate toDate:self.toDate options:0];
     
     self.days = [components day];
-    
-    NSLog(@"%i",self.days);
 }
 
 - (IBAction)saveEventAction:(id)sender {
