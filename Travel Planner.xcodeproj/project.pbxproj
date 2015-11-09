@@ -13,6 +13,8 @@
 		041A0E9C1BE4DEEF002F7F01 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A0E9B1BE4DEEF002F7F01 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		04216F561BE630B600E34ACD /* OMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04216F551BE630B600E34ACD /* OMTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		04216F591BE640BB00E34ACD /* CreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04216F581BE640BB00E34ACD /* CreateEventViewController.m */; settings = {ASSET_TAGS = (); }; };
+		04C64B021BF12FC4008B183D /* TimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C64B011BF12FC4008B183D /* TimetableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		04C64B051BF12FFE008B183D /* TimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C64B041BF12FFE008B183D /* TimeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		04FF7A2C1BE4D33B00B9054A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF7A2B1BE4D33B00B9054A /* main.m */; };
 		04FF7A2F1BE4D33B00B9054A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF7A2E1BE4D33B00B9054A /* AppDelegate.m */; };
 		04FF7A351BE4D33B00B9054A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FF7A331BE4D33B00B9054A /* Main.storyboard */; };
@@ -53,6 +55,10 @@
 		04216F551BE630B600E34ACD /* OMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMTableViewCell.m; sourceTree = "<group>"; };
 		04216F571BE640BB00E34ACD /* CreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEventViewController.h; sourceTree = "<group>"; };
 		04216F581BE640BB00E34ACD /* CreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEventViewController.m; sourceTree = "<group>"; };
+		04C64B001BF12FC4008B183D /* TimetableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableViewController.h; sourceTree = "<group>"; };
+		04C64B011BF12FC4008B183D /* TimetableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableViewController.m; sourceTree = "<group>"; };
+		04C64B031BF12FFE008B183D /* TimeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTableViewCell.h; sourceTree = "<group>"; };
+		04C64B041BF12FFE008B183D /* TimeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTableViewCell.m; sourceTree = "<group>"; };
 		04FF7A271BE4D33B00B9054A /* Travel Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FF7A2B1BE4D33B00B9054A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04FF7A2D1BE4D33B00B9054A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 		04216F531BE62C5F00E34ACD /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				04C64AFF1BF12F6C008B183D /* Timetable */,
 				041A0E9A1BE4DEEF002F7F01 /* HomeViewController.h */,
 				041A0E9B1BE4DEEF002F7F01 /* HomeViewController.m */,
 				04216F541BE630B600E34ACD /* OMTableViewCell.h */,
@@ -146,6 +153,17 @@
 				04216F581BE640BB00E34ACD /* CreateEventViewController.m */,
 			);
 			name = Event;
+			sourceTree = "<group>";
+		};
+		04C64AFF1BF12F6C008B183D /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				04C64B001BF12FC4008B183D /* TimetableViewController.h */,
+				04C64B011BF12FC4008B183D /* TimetableViewController.m */,
+				04C64B031BF12FFE008B183D /* TimeTableViewCell.h */,
+				04C64B041BF12FFE008B183D /* TimeTableViewCell.m */,
+			);
+			name = Timetable;
 			sourceTree = "<group>";
 		};
 		04FF7A1E1BE4D33B00B9054A = {
@@ -413,11 +431,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C64B051BF12FFE008B183D /* TimeTableViewCell.m in Sources */,
 				04FF7A2F1BE4D33B00B9054A /* AppDelegate.m in Sources */,
 				041A0E991BE4DCC7002F7F01 /* ResetPasswordViewController.m in Sources */,
 				04FF7A2C1BE4D33B00B9054A /* main.m in Sources */,
 				04216F591BE640BB00E34ACD /* CreateEventViewController.m in Sources */,
 				041A0E961BE4DB57002F7F01 /* SignUpViewController.m in Sources */,
+				04C64B021BF12FC4008B183D /* TimetableViewController.m in Sources */,
 				04216F561BE630B600E34ACD /* OMTableViewCell.m in Sources */,
 				041A0E931BE4D629002F7F01 /* SplashScreenViewController.m in Sources */,
 				041A0E9C1BE4DEEF002F7F01 /* HomeViewController.m in Sources */,

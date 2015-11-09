@@ -170,6 +170,55 @@
             </objects>
             <point key="canvasLocation" x="101.5" y="388.5"/>
         </scene>
+        <!--Timetable View Controller-->
+        <scene sceneID="zUs-1X-cUY">
+            <objects>
+                <viewController storyboardIdentifier="IDTimetable" id="Ts2-dF-Aha" customClass="TimetableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TyJ-qt-ygq"/>
+                        <viewControllerLayoutGuide type="bottom" id="J45-ND-87U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SOy-Oz-Woc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Swu-1a-q7s">
+                                <rect key="frame" x="0.0" y="47" width="375" height="620"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="FKE-Zn-SLM" customClass="TimeTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="53"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FKE-Zn-SLM" id="OKQ-u5-Tn0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ts2-dF-Aha" id="jPP-Vm-l8Q"/>
+                                    <outlet property="delegate" destination="Ts2-dF-Aha" id="cRz-Yz-6XS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.2901960784" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Swu-1a-q7s" secondAttribute="trailing" id="18e-ne-i8p"/>
+                            <constraint firstItem="J45-ND-87U" firstAttribute="top" secondItem="Swu-1a-q7s" secondAttribute="bottom" id="Ydc-PK-rSc"/>
+                            <constraint firstItem="Swu-1a-q7s" firstAttribute="leading" secondItem="SOy-Oz-Woc" secondAttribute="leading" id="rKw-8c-Krk"/>
+                            <constraint firstItem="Swu-1a-q7s" firstAttribute="top" secondItem="TyJ-qt-ygq" secondAttribute="bottom" constant="27" id="uEr-f8-Zgf"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6O-yJ-7Yg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569.5" y="1164.5"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="ylP-jv-1y4">
             <objects>
@@ -248,6 +297,18 @@
                                     <outlet property="delegate" destination="LB9-V1-B8Y" id="va7-Qu-K8I"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utc-3z-vZs">
+                                <rect key="frame" x="206" y="20" width="68" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="G24-aZ-sCS"/>
+                                    <constraint firstAttribute="height" constant="30" id="mgz-MF-Sy0"/>
+                                </constraints>
+                                <state key="normal" title="Timetable"/>
+                                <connections>
+                                    <action selector="timeTableAction:" destination="LB9-V1-B8Y" eventType="touchUpInside" id="7II-ye-37T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.68806882489999999" green="1" blue="0.94517272029999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -259,7 +320,9 @@
                             <constraint firstAttribute="trailing" secondItem="bmz-e3-dNJ" secondAttribute="trailing" constant="20" id="RaM-Is-iqE"/>
                             <constraint firstItem="48s-5l-pL9" firstAttribute="top" secondItem="P2R-Wp-FSS" secondAttribute="bottom" id="YVL-hD-by9"/>
                             <constraint firstItem="bmz-e3-dNJ" firstAttribute="top" secondItem="n2g-1n-64h" secondAttribute="bottom" id="azv-Gy-u2S"/>
+                            <constraint firstItem="utc-3z-vZs" firstAttribute="top" secondItem="n2g-1n-64h" secondAttribute="bottom" id="dx6-Ap-rwR"/>
                             <constraint firstItem="S9j-Gg-Q96" firstAttribute="top" secondItem="n2g-1n-64h" secondAttribute="bottom" constant="4" id="m8P-4l-1Gn"/>
+                            <constraint firstItem="bmz-e3-dNJ" firstAttribute="leading" secondItem="utc-3z-vZs" secondAttribute="trailing" constant="21" id="mQL-rK-dZA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fds-Oh-S33"/>
@@ -554,7 +617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yra-e4-EyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037.5" y="1194.5"/>
+            <point key="canvasLocation" x="1037.5" y="1164.5"/>
         </scene>
     </scenes>
 </document>

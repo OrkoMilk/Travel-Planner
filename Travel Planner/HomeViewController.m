@@ -10,11 +10,13 @@
 #import "SplashScreenViewController.h"
 #import "OMTableViewCell.h"
 #import "CreateEventViewController.h"
+#import "TimetableViewController.h"
 #import <Parse/Parse.h>
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *eventsArray;
+@property (strong, nonatomic) NSMutableArray *nextMonth;
 
 @end
 
@@ -23,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.nextMonth = [NSMutableArray array];
     [self fromParse];
     [self.tableView reloadData];
 }
@@ -119,11 +122,16 @@
     int days = [components day];
     NSLog(@"%i",days);
     
+    if (days > 30) {
+        [self.nextMonth addObject:tempObject];
+    }
+    
     cell.dateToLabel.text = [NSString stringWithFormat:@"the event left:%d days",days];
     
     return cell;
 
 }
+
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -153,6 +161,18 @@
 
 }
 
+
+- (IBAction)timeTableAction:(id)sender {
+    
+//    TimetableViewController *newController = [self.storyboard instantiateViewControllerWithIdentifier:@"IDTimetable"];
+//    newController.timeTableArray = self.nextMonth;
+//    [self presentViewController:newController animated:YES completion:nil];
+    
+    
+//    TimetableViewController *newController = [self.storyboard instantiateViewControllerWithIdentifier:@"IDTimetable"];
+//    [self presentViewController:newController animated:YES completion:nil];
+
+}
 
 
 @end

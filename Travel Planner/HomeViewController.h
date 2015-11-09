@@ -18,5 +18,6 @@
 //actions
 - (IBAction)logOutAction:(id)sender;
 - (IBAction)addNewEvent:(id)sender;
+- (IBAction)timeTableAction:(id)sender;
 
 @end
